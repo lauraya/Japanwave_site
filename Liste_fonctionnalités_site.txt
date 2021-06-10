@@ -1,0 +1,58 @@
+-Système de pagination 
+
+-Fonctionnalités visiteur:
+->Panier temporaire
+->Inscription/Connexion, contrôle des champs en Javascript et validation en php
+
+
+-Fonctionnalités clients:
+->Panier client
+->Peut voir son profil: changer de mot de passe, voir son historique des commandes
+->Peut passer à l'achat
+
+
+
+-Fonctionnalités admnistrateur:
+->Peut supprimer des clients
+->Peut laisser un client devenir vendeur, l'id client dans la table commande est alors mis a null et sa commande 'en cours'
+est supprimée
+->S'il supprime un client, seule sa commande en cours est supprimée, ses commandes achevées restent dans la base
+mais n'auront plus d'id_client associé
+->Peut supprimer des vendeurs si ces derniers n'ont pas plus de 5 produits dans la base de donnée
+->Si un vendeur est supprimé, l'id_vendeur des produits est mis a null et leur statutprod devient 'supprime', car on
+a besoin de garder ces produits dans la base pour afficher l'historique de commande du client
+
+
+
+-Barre de recherche (dans le footer de la page): Permet de rechercher les produits par nom
+
+
+
+-Panier:
+Un panier temporaire pour le visiteur.
+Si le visiteur se connecte à son compte client
+->Le client retrouve son panier client == celui enregistré dans la bd à la dernière déconnexion. (Cet enregistrement se
+fait dans deconnexion.php)
+Additionnellement, si des produits du panier temporaire ne sont pas présents dans le panier client ceux-ci sont rajoutés
+lorsque le client se connecte.
+Au niveau de la bd Le statut etatcommande 'en cours' dans la table commande est le panier client (il n'ya pas encore de date) 
+et lorsque etatcommande correspond à 'complete' l'utilisateur a passé commande et ds ce cas la date est rajoutée
+-A la déconnexion, ttes les variables sessions sont supprimées et le panier est enregistré dans la bd 
+
+
+-Conséquences d'une modification de quantité de produits:
+Si un produit est présent dans le panier d'un client, et que la quantité de celui-ci baisse (quantité panier>quantité produit) 
+suite à un  achat par un autre client ou un changement des stocks par le vendeur
+Alors le client est prévenu du changement de stock à sa prochaine connexion
+et la quantité du produit dans le panier sera changé en celui de la quantité restante du produit.
+Additionnellement si un produit a une quantité de 0 (out of stock) le client est également prévenu à sa prochaine connexion
+et le produit est tt simplement ignoré dans l'affichage du panier client.
+
+
+-Conséquences d'une suppression de produit:
+-Le produit n'est pas vraiment supprimé de la base de donnée, le statutprod dans la table produits devient supprime
+
+-Conséquences d'une suppression de vendeur:
+-Le vendeur est supprimé de la base de donnée
+-Ses produits restent dans la base de donnée mais id_vendeur est mis a null, la quantité a 0 et le statutprod est 'supprime'.
+

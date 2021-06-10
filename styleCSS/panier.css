@@ -1,0 +1,378 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+   font-family: Courier New;
+}
+body, html {
+  height: 100%;
+}
+
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav-wrapper{
+  height: 117px;
+}
+nav{
+    width: 100%;
+    height: 117px;
+    margin: 0 auto;
+    background-color: black;
+    top: 0px;
+    font-size:1.25vw;
+    z-index:2;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav img{
+  float:left;
+  max-width:7%;
+  height: auto;
+  filter: brightness(0) invert(1); /*Change la couleur de l'image en blanc*/
+}
+
+
+nav ul li{
+    float: left;
+    width:15%; /*contrôle la taille des rubriques*/
+    text-align: center;
+    position: relative;
+}
+
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    padding: 15% 0%;
+}
+
+nav a:hover{
+    color: white;
+    border-bottom: 2px solid white;
+   }
+
+
+
+.deroule{
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+nav > ul li:hover .deroule{
+    display: block;
+}
+.deroule li{
+    float: none;
+    width: 100%;
+    text-align: left;
+    background-color:rgba(0,0,0,.7);
+}
+.deroule a{
+    padding: 10px;
+    border-bottom: none;
+}
+.deroule a:hover{
+    border-block:1px solid white;
+}
+.deroulant > a::after{
+    font-size: 12px;
+}
+
+.droite{
+  float:right;
+}
+
+
+.product-container{
+  max-width: 650px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+.product-containerclient{
+  max-width: 900px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+
+.product-container img{
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  display: flex;
+}
+
+.product-header{
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  justify-content: flex-start;
+ 
+  margin: auto;
+}
+
+.product-headerclient{
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: flex-start;
+ 
+  margin: auto;
+}
+
+
+.titre{
+  width: 75%;
+  border-bottom: 1px solid black;
+  display: flex;
+}
+
+
+
+
+.quantite{
+  width:45%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  
+}
+.prix{
+  width: 40%;
+  display:flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+   
+}
+
+.mail{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+
+}
+
+.commande{
+  width: 120%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+
+}
+
+.entreprise{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+
+}
+
+.statut{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+
+
+}
+.vendeur{
+   width: 40%;
+  display:flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.total{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+
+}
+
+.suppression{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+
+}
+
+.align{
+  display: flex;
+}
+
+.produit{
+  width: 80%;
+  display:flex;
+ 
+  align-items: center;
+  padding: 10px 0px;
+  border-bottom: 1px solid black;
+}
+
+.bouton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+ 
+}
+
+.bouton button{
+   background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1700px){
+
+  .nav-wrapper{
+  height: 105px;
+}
+  nav{
+    height: 105px;
+
+  }
+
+
+}
+
+@media screen and (max-width: 1556px){
+
+  .nav-wrapper{
+  height: 95px;
+}
+  nav{
+    height: 95px;
+
+  }
+
+
+}
+  
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: black;
+
+}
+
+
+
+.pagination a:hover {
+  color:black;
+  background-color: #ddd;}
+
+
+@media screen and (max-width: 1385px){
+  .liste{
+
+    float: none;
+    margin: 20px 70px;
+    width:70%;
+}
+
+footer{
+  height:600px;
+  width: 100%;
+}
+
+.Credits img.Paypal{
+
+  margin-left: 70%;
+}
+}
+
+@media screen and (max-width: 1280px){
+
+  .nav-wrapper{
+  height: 70px;
+}
+  nav{
+    height: 70px;
+
+  }
+
+
+}
+
+@media screen and (max-width: 1040px){
+
+   .nav-wrapper{
+  height: 60px;
+}
+  nav{
+
+    height: 60px;
+  }
+
+  .Credits {
+    margin-top: 0px;
+    float: left;
+    width:100vw;
+}
+
+.Credits img.Paypal{
+
+  margin-left: 65%;
+}
+}
+
+
+@media screen and (max-width: 1000px){
+  .Credits img.Paypal{
+
+  margin-left: 30%;
+}
+}
+
+@media screen and (max-width: 600px){
+
+   .nav-wrapper{
+  height: 35px;
+}
+  nav{
+     
+    height: 35px;
+  }
+}

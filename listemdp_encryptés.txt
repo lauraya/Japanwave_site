@@ -1,0 +1,13 @@
+ts les identifiants ont été trim donc pas d'espaces surperflus au début et à la fin
+Les mdp n'ont pas été entrés avec des espaces non plus
+
+Identifiant: momo
+mdp: 123456 
+client
+
+Identifiant: shinji
+mdp: evangelion
+client 
+
+Pour le reste des utilisateurs au mdp encrypté:
+mdp: 123456 

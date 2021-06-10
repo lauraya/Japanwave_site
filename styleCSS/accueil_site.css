@@ -1,0 +1,459 @@
+/*applique les propeiétés à toute la page*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:Courier New;
+}
+body, html {
+  height: 100%;
+  
+
+}
+
+body{
+   overflow-x: hidden;
+
+}
+
+
+
+header{
+  background-image: url(../images/Tokyo_Drawing.jpg);
+  padding:30px;
+  height: 8%;
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat; /*Pas de répétition de l'image*/
+  background-size: cover;
+  position: relative;
+
+}
+
+header h1{
+    font-size: 40px;
+  color: #fff;
+  text-align: center;
+  font-size: 70px;
+  animation: brillance 1s ease-in-out infinite alternate;
+
+}
+
+@keyframes brillance {
+  from {
+    text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black, 0 0 20px black, 0 0 25px black, 0 0 30px black, 0 0 35px black;
+  }
+  to {
+    text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black, 0 0 40px black, 0 0 50px black, 0 0 60px black, 0 0 70px black;
+  }
+}
+/*style de la barre de navigation*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav-wrapper{
+  height: 117px;
+}
+nav{
+    width: 100%;
+    height: 117px;
+    margin: 0 auto;
+    background-color: black;
+    top: 0px;
+    font-size:1.25vw;
+    z-index:2;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav img{
+  float:left;
+  max-width:7%;
+  height: auto;
+  filter: brightness(0) invert(1); /*Change la couleur de l'image en blanc*/
+}
+
+
+nav ul li{
+    float: left;
+    width:15%; /*contrôle la taille des rubriques*/
+    text-align: center;
+    position: relative;
+}
+
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    padding: 15% 0%;
+}
+
+nav a:hover{
+    color: white;
+    border-bottom: 2px solid white;
+   }
+
+
+
+.deroule{
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+nav > ul li:hover .deroule{
+    display: block;
+}
+.deroule li{
+    float: none;
+    width: 100%;
+    text-align: left;
+    background-color:rgba(0,0,0,.7);
+}
+.deroule a{
+    padding: 10px;
+    border-bottom: none;
+}
+.deroule a:hover{
+    border-block:1px solid white;
+}
+.deroulant > a::after{
+    font-size: 12px;
+}
+
+.droite{
+  float:right;
+}
+
+/*Fin du style de la barre*/
+
+/*Style du message de bienvenue sur le site*/
+
+.presentation{
+  background-image: url("../images/wave_background.jpg"); /*On remonte jusqu'au dossier précédent (../) puis on séléectionne le dossier images qui contient l'image*/
+  background-color: black;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat; /*Pas de répétition de l'image*/
+  background-size: cover;
+  position: relative;
+   background-attachment: fixed; 
+}
+
+.ligne{
+    font-family: Courier New;
+    width: 41em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 2.5vw;
+    white-space:pre;
+    overflow: hidden; /*le contenu est caché jusqu'à l'animation*/
+    text-align: center;
+    position: absolute;
+    text-shadow: 2px 2px 3px black;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;  
+    background: rgba(0,0,0,.5); /*Couleur noire et opacité à 0.5*/
+    box-shadow:2px 2px 5px black;
+    z-index:1;
+    
+}
+
+.machine{
+  animation: machine 4s steps(44) 1s 1 normal both, /*L'animatirrer et ne se répète que 1 fois*/
+             curseur 500ms infinite normal; /*L'animation se fera touteson se fait en 4 seconde avec un pas de 44, prend 1 seconde pour déma les 500ms indéfiniment'*/
+}
+@keyframes machine{
+  from{width: 0em;} /*La largeur de la classe machine s'étend de 0 à 41*/
+  to{width: 39em;}
+}
+@keyframes curseur{
+  from{border-right-color: white;}
+  to{border-right-color: transparent;} /*le curseur devient blanc puis transparent (toutes les 500 ms) donnant l'impression d'un clignotement*/
+}
+
+/*Style pour les produits*/
+
+article{
+   background-image: url("../images/White_wave.jpg");/*On remonte jusqu'au dossier précédent (../) puis on séléectionne le dossier images qui contient l'image*/
+   height: 100%; 
+   background-color: white; 
+  background-position: center;
+  background-repeat: no-repeat; /*Pas de répétition de l'image*/
+  background-size: cover;
+   background-attachment: fixed; 
+
+
+}
+
+article h1{ 
+  background-color:rgba(255, 255, 255);
+  text-align: center;
+  font-size: 50px;
+  width:50%;
+  margin-right: auto;
+  margin-left:auto; 
+  text-shadow: 1px 1px 2px grey;
+}
+
+#hover-area{  
+ margin:auto;
+  display: block;
+  width:500px;
+  height:50px;
+
+}
+
+#hover-area2{ 
+ margin:auto;
+  display: block;
+  width:700px;
+  height:125px;}
+
+
+#reveal, #reveal2{
+  background: #fafafa;
+  width: 100%;
+  display: none;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px #555;
+  padding: 50px;
+}
+
+
+/*Style pour les produits*/
+
+section img {
+ border-radius: 50% 20% / 10% 40%;
+  width: 300px;
+  height: 300px;
+  box-shadow: 8px 5px 5px grey;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding-bottom: 100px
+}
+
+.image{
+  margin-right: 20px;
+  margin-left: 20px;
+  position:relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+.ajout{
+  position: absolute;
+  width: 100%;
+  background-color: darkgrey;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+article p{
+  color: black;
+  font-size: 22px;
+  text-align:center;
+  background-color: rgba(255,255,255,.9);
+  font-weight: 500;
+  border-radius: 50% 20% / 10% 40%;
+
+}
+
+.image:hover .produit1,
+.image:hover .produit2,
+.image:hover .produit3,
+.image:hover .produit4,
+.image:hover .produit5,
+.image:hover .produit6,
+.image:hover .produit7,
+.image:hover .produit8,
+.image:hover .produit9,
+.image:hover .produit10,
+.image:hover .produit11,
+.image:hover .produit12,
+.image:hover .produit13,
+{
+  bottom: 50px;
+  opacity: 1;
+  padding:10px;
+  text-decoration:none;
+}
+
+
+
+ footer {
+  position: absolute;
+     overflow: hidden;
+  height: 240px;
+  background-color: black;
+  color: white;
+  width: 100%;
+        }
+
+.liste{
+    float: left;
+    margin: 20px 70px;
+    width: 20%;
+}
+
+.heading2 {
+    font-weight: 500;
+    color: gray;
+}
+
+footer ol {
+    list-style: none;
+}
+
+footer li {
+    margin: 10px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: blue;
+}
+
+.SocialIcon {
+    height: 28px;
+    border-radius: 7px;
+}
+
+#IconList {
+    display: flex;
+}
+#IconList li {
+    margin: 0 10px;
+} 
+.Credits {
+    margin-top: 40px;
+    float: left;
+    width:100vw;
+}
+.Credits img.Paypal{
+
+  margin-left: 77%;
+}
+
+
+@media screen and (max-width: 1556px){
+
+  .nav-wrapper{
+  height: 95px;
+}
+  nav{
+    height: 95px;
+
+  }
+
+
+}
+  
+
+@media screen and (max-width: 1385px){
+  .liste{
+
+    float: none;
+    margin: 20px 70px;
+    width:70%;
+}
+
+footer{
+  height:600px;
+  width: 100%;
+}
+
+.Credits img.Paypal{
+
+  margin-left: 70%;
+}
+}
+
+@media screen and (max-width: 1280px){
+
+  .nav-wrapper{
+  height: 70px;
+}
+  nav{
+    height: 70px;
+
+  }
+
+
+}
+
+@media screen and (max-width: 1040px){
+
+   .nav-wrapper{
+  height: 60px;
+}
+  nav{
+
+    height: 60px;
+  }
+
+  .Credits {
+    margin-top: 0px;
+    float: left;
+    width:100vw;
+}
+
+.Credits img.Paypal{
+
+  margin-left: 65%;
+}
+}
+
+
+@media screen and (max-width: 1000px){
+  .Credits img.Paypal{
+
+  margin-left: 30%;
+}
+
+header h1{
+  font-size: 30px;
+}
+}
+
+
+
+@media screen and (max-width: 600px){
+
+   .nav-wrapper{
+  height: 35px;
+}
+  nav{
+     
+    height: 35px;
+  }
+}

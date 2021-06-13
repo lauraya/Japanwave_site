@@ -33,8 +33,8 @@ Un site que j'ai crée dans le pour un projet universitaire
 ![image](https://user-images.githubusercontent.com/85686740/121814848-761f4c00-cc73-11eb-924f-6ddee3fdea95.png)
 
 # Fonctionnalités administrateur
-<strong>-Suppression clients/vendeurs ou promotion de clients</strong>
+<strong>-Suppression clients/vendeurs ou promotion de clients:</strong><br><br>
 ![image](https://user-images.githubusercontent.com/85686740/121814902-bda5d800-cc73-11eb-9b70-13d17271a4ab.png)
 ![image](https://user-images.githubusercontent.com/85686740/121814924-eb8b1c80-cc73-11eb-99a5-18666c68c757.png)
 
-
+<strong>-Modification des stocks<strong>

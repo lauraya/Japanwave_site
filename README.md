@@ -2,7 +2,7 @@
 Un site que j'ai crée dans le cadre d'un projet universitaire
 
 # Fonctionnalités visiteurs
--Ajout de produit (pages de produits avec pagination):<br>
+-Ajout de produits (pages de produits avec pagination):<br><br>
 ![image](https://user-images.githubusercontent.com/85686740/121814367-f09a9c80-cc70-11eb-8815-991789530f57.png)
 
 -Panier en session:<br>

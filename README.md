@@ -1,5 +1,5 @@
 # Japanwave_site
-Un site que j'ai crée dans le cadre d'un projet universitaire
+Un site que j'ai crée dans le pour un projet universitaire
 
 # Fonctionnalités visiteurs
 <strong>-Ajout de produits (pages de produits avec pagination):</strong><br><br>
